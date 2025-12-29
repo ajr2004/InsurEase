@@ -1,0 +1,10 @@
+package com.insurease.repository;
+
+import com.insurease.model.Policy;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface PolicyRepository extends JpaRepository<Policy, Long> {
+    List<Policy> findByCustomerId(Long customerId);
+    //List<Policy> findByCustomerRegNo(String regNo);
+}
